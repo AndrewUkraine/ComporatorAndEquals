@@ -1,6 +1,6 @@
-import java.util.Comparator;
 
-public class Car {
+
+public class Car{
 
     String name;
 
