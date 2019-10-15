@@ -1,6 +1,6 @@
 
 
-public class Car{
+public class Car extends Pig{
 
     String name;
 
@@ -44,26 +44,25 @@ public class Car{
             return false;
         }
 
-        final  Car otherCar = (Car) obj;
-
-        if (this.name == null || otherCar.name == null)
+        if (((Pig)(obj)).name == null)
         {
             return false;
         }
 
-        return this.name.equals(otherCar.name) && this.color.equals(otherCar.color);
+        return this.name.equals(((Pig)(obj)).name);
     }
-
-
 
 
     public static void main(String[] args) {
         Car car = new Car("Opel", "Black");
-        Car car1 = new Car("Opel", "Black");
-        Car car2 = new Car("Opel", "Red");
 
-        System.out.println(car.equals(car1));
-        System.out.println(car.equals(car2));
+
+        Pig pig = new Pig("Opel", 21, "Black");
+
+
+
+        System.out.println(car.equals(pig));
+
     }
 
 
